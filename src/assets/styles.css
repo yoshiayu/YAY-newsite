@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Adjusted height for the header */
+}
+
+.sidebar {
+  width: 120px; /* 幅を減らしました */
+  background-color: rgba(44, 62, 80, 0.9); /* 半透明に設定 */
+  color: #ecf0f1;
+  padding: 10px;
+  position: fixed;
+  top: 60px; /* Adjusted height for the header */
+  left: 0;
+  height: calc(100vh - 60px); /* Adjusted height for the header */
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+}
+
+.sidebar-show {
+  transform: translateX(0);
+}
+
+.content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+}
+
+.main-content {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

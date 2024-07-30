@@ -1,26 +1,76 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <AppHeader @toggleSidebar="toggleSidebar" />
+    <div class="main">
+      <AppSidebar :sidebarVisible="sidebarVisible" @closeSidebar="toggleSidebar" />
+      <div class="content">
+        <router-view class="main-content"></router-view>
+      </div>
+    </div>
+    <button v-if="showButton" @click="scrollToTop" class="scroll-top-button">▲</button>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppSidebar from './components/AppSidebar.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppHeader,
+    AppSidebar
+  },
+  data() {
+    return {
+      showButton: false,
+      sidebarVisible: false
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    },
+    checkScroll() {
+      this.showButton = window.scrollY > 200;
+    },
+    toggleSidebar() {
+      this.sidebarVisible = !this.sidebarVisible;
+    }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.checkScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.checkScroll);
   }
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style src="./assets/styles.css"></style>
+<style scoped>
+.main {
+  display: flex;
+  flex: 1;
+}
+.content {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+}
+.scroll-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 </style>
