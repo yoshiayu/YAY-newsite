@@ -58,6 +58,18 @@ export default {
 </script>
 
 <style scoped>
+.main-content {
+  background-color: rgba(255, 255, 255, 0.9); /* ホワイト */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Lato', sans-serif;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif; /* タイトル用フォント */
+  font-weight: bold;
+  color: #1e90ff; /* 明るいブルー */
+}
 form {
   display: flex;
   flex-direction: column;
@@ -70,22 +82,23 @@ form div {
 }
 form label {
   margin-bottom: 5px;
+  color: #333;
 }
 form input, form textarea {
   padding: 10px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 5px;
 }
 button {
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #1e90ff; /* 明るいブルー */
   color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 button:hover {
-  background-color: #555;
+  background-color: #f39c12; /* オレンジ */
 }
 </style>

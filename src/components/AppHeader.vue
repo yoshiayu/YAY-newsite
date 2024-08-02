@@ -13,11 +13,13 @@ export default {
 
 <style scoped>
 header {
-  background-color: #333;
+  background-color: #1e90ff; /* 明るいブルー */
   color: #fff;
   padding: 10px;
   text-align: center;
   position: relative;
+  font-family: 'Montserrat', sans-serif; /* タイトル用フォント */
+  font-weight: bold;
 }
 .toggle-button {
   position: absolute;

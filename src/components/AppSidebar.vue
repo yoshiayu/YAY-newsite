@@ -33,14 +33,14 @@ export default {
 
 <style scoped>
 .sidebar {
-  width: 180px; /* 幅を減らしました */
+  width: 180px; /* 幅を調整 */
   background-color: rgba(44, 62, 80, 0.9); /* 半透明に設定 */
   color: #ecf0f1;
   padding: 10px;
   position: fixed;
-  top: 60px; /* Adjusted height for the header */
+  top: 60px; /* ヘッダーとの重なりを防ぐ */
   left: 0;
-  height: calc(100vh - 60px); /* Adjusted height for the header */
+  height: calc(100vh - 60px); /* ヘッダーの高さを考慮 */
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -62,6 +62,7 @@ export default {
   right: 10px;
   cursor: pointer;
 }
+
 .close-button:hover {
   color: #bdc3c7;
 }
@@ -83,6 +84,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  color: #f39c12; /* オレンジ */
 }
 </style>

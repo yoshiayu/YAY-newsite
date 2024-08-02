@@ -60,14 +60,14 @@ export default {
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: center; /* 中央に配置 */
+  justify-content: center;
 }
 .scroll-top-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
   padding: 10px;
-  background-color: #333;
+  background-color: #f39c12; /* オレンジ */
   color: #fff;
   border: none;
   border-radius: 5px;

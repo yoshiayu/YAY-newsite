@@ -14,9 +14,19 @@ export default {
 
 <style scoped>
 .main-content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9); /* ホワイト */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+h2 {
+  font-family: 'Montserrat', sans-serif; /* タイトル用フォント */
+  font-weight: bold;
+  color: #1e90ff; /* 明るいブルー */
+}
+p {
+  color: #333;
 }
 </style>

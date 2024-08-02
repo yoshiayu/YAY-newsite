@@ -1,7 +1,8 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f0f8ff; /* 明るいブルー */
 }
 
 #app {
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-  background-color: #333;
+  background-color: #1e90ff; /* 明るいブルー */
   color: #fff;
   padding: 10px;
   text-align: center;
@@ -20,23 +21,25 @@ header {
   top: 0;
   left: 0;
   z-index: 1001;
+  font-family: 'Montserrat', sans-serif; /* タイトル用フォント */
+  font-weight: bold;
 }
 
 .main {
   display: flex;
   flex: 1;
-  margin-top: 60px; /* Adjusted height for the header */
+  margin-top: 60px; /* ヘッダー分のマージン */
 }
 
 .sidebar {
-  width: 120px; /* 幅を減らしました */
-  background-color: rgba(44, 62, 80, 0.9); /* 半透明に設定 */
+  width: 180px;
+  background-color: rgba(44, 62, 80, 0.9);
   color: #ecf0f1;
   padding: 10px;
   position: fixed;
-  top: 60px; /* Adjusted height for the header */
+  top: 60px;
   left: 0;
-  height: calc(100vh - 60px); /* Adjusted height for the header */
+  height: calc(100vh - 60px);
   overflow-y: auto;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
@@ -52,7 +55,7 @@ header {
   width: 100%;
   padding: 20px;
   display: flex;
-  justify-content: center; /* 中央に配置 */
+  justify-content: center;
 }
 
 .main-content {
@@ -65,12 +68,13 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f9f9f9;
+  background-color: #ffffff; /* ホワイト */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Lato', sans-serif; /* 本文用フォント */
 }
 
 footer {
-  background-color: #333;
+  background-color: #1e90ff; /* 明るいブルー */
   color: #fff;
   text-align: center;
   padding: 10px;
@@ -100,7 +104,7 @@ footer {
   bottom: 20px;
   right: 20px;
   padding: 10px;
-  background-color: #333;
+  background-color: #f39c12; /* オレンジ */
   color: #fff;
   border: none;
   border-radius: 5px;

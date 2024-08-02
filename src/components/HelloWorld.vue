@@ -39,10 +39,20 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.hello {
+  font-family: 'Lato', sans-serif; /* 本文用フォント */
+  text-align: center;
+  margin-top: 40px;
+}
+h1 {
+  font-family: 'Montserrat', sans-serif; /* タイトル用フォント */
+  font-weight: bold;
+  color: #1e90ff; /* 明るいブルー */
+}
 h3 {
   margin: 40px 0 0;
+  color: #333;
 }
 ul {
   list-style-type: none;
@@ -53,6 +63,10 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #1e90ff; /* 明るいブルー */
+  text-decoration: none;
+}
+a:hover {
+  color: #f39c12; /* オレンジ */
 }
 </style>
